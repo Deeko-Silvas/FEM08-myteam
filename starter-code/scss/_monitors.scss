@@ -1,0 +1,232 @@
+h1 {
+    font-size: 100px;
+    font-weight: bold;
+    line-height: 100px;
+}
+
+h2 {
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 48px;
+}
+
+.flex-row-vcenter-l {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.font-body-1-l {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+header {
+    height: 121px;
+    .header-container {
+        .header-inner-container {
+            .header-logo-container {
+                .header-logo {
+                    height: 40px;
+                }
+            }
+
+            nav {
+                ul {
+                    padding-left: 80px;
+                }
+            }
+        }
+    }
+}
+
+main {
+    .landing-container {
+        background-image: url("../images/bg-pattern-home-1.svg");
+        background-position: top calc(50% - 50px) left -100px;
+
+        padding: 123px 0 0;
+        .talent-container {
+            background-image: url("../images/bg-pattern-home-2.svg");
+            background-position: bottom right;
+            background-repeat: no-repeat;
+            background-size: initial;
+
+            @extend .flex-row-vcenter-l;
+            justify-content: space-between;
+            padding: 0;
+            h1,
+            p {
+                text-align: left;
+                margin-bottom: 245px;
+            }
+            h1 {
+                width: 60%; 
+            }
+            p {
+                // padding-left: 30px;
+                padding-top: 0;
+                margin-top: 0;
+                width: 40%;
+                @extend .font-body-1-l;
+
+                &::before {
+                    content: "";
+                    display: block;
+                    height: 4px;
+                    width: 50px;
+                    margin-bottom: 80px;
+                    margin-top: 4px;
+                    background-color: $SecondaryLightBlue;
+                }
+            }
+        }
+    }
+
+    .about-container {
+        padding: 141px 0 134px;
+        background-position: bottom right -100px;
+        .about-inner-container {
+            @extend .flex-row-vcenter-l;
+            align-items: flex-start;
+
+            .about-heading-container {
+                width: 50%;
+                padding-right: 50px;
+
+                h2 {
+                    margin-top: 54px;
+                }
+            }
+
+            .about-cards {
+                margin: 31px 0 0 27px;
+                width: 50%;
+            }
+
+        }
+    }
+
+    .reviews-main-container {
+        padding: 140px 0 112px;
+        .reviews-container {
+            h2 {
+                padding: 0 80px;
+            }
+
+            .cards-container {
+                @extend .flex-row-vcenter-l;
+
+                .review-card {
+                    margin-top: 48px;
+
+                    h3 {
+                        margin-top: 25px;
+                    }
+
+                    p {
+                        padding: 0 7px;
+
+
+                    }
+
+                    &:first-of-type {
+                        p {
+                            margin-right: 12px;
+                        }
+                    }
+
+                    &:nth-of-type(2) {
+                        p {
+                            margin: 0 10px;
+                        }
+                    }
+
+                    
+                    &:last-of-type {
+                        p {
+                            margin-left: 12px;
+                        }
+                    }
+
+                    .job-title {
+                        margin-top: 1px;
+                    }
+
+                    img {
+                        margin-top: 30px;
+                    }
+                }
+            }
+        }
+    }
+
+    .start-container {
+        background-position: bottom left;
+    }
+}
+
+footer {
+    padding: 49px 0 47px;
+    .footer-main-container {
+        @extend .flex-row-vcenter-l;
+        .footer-first-container {
+            width: 50%;
+            justify-content: flex-start;
+            .nav-container {
+                width: 50%;
+
+                img {
+                    height: 40px;
+                    width: 160px;
+                }
+
+                .footer-nav {
+                    margin: 0;
+                    text-align: left;
+                    margin-bottom: 7px;
+
+                    li {
+                        margin-right: 27px;
+                        a {
+                            @extend .font-body-1-l;
+                        }
+                    }
+                }
+                
+            }
+
+            .contact-container {
+                width: 50%;
+                text-align: left;
+                margin-left: 13px;
+            }
+
+
+
+        }
+
+        .footer-second-container {
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-end;
+            width: 50%;
+            height: 100px;
+            margin: 0;
+
+            .social-container {
+                a {
+                    &.twitter {
+                        margin-right: 0;
+                    }
+                }
+
+            }
+
+            .copyright-container {
+                // margin-right: 5px;
+            }
+        }
+    }
+}

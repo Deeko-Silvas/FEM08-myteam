@@ -5,79 +5,222 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link href="https://fonts.googleapis.com/css2?family=Livvic:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="scss/normalize.css">
+  <link rel="stylesheet" href="scss/reset.local.css">
+  <link rel="stylesheet" href="scss/main.css">
   
   <title>Frontend Mentor | myteam website challenge - Homepage</title>
 </head>
 <body>
-
-  home
-  about
-
-  contact us
-
-
-
-  Find the best talent
-
-  Finding the right people and building high performing teams can 
-  be hard. Most companies aren’t tapping into the abundance of global 
-  talent. We’re about to change that.
-
-
-
-  Build & manage distributed teams like no one else.
-
-  Experienced Individuals
-  Our network is made up of highly experienced professionals who are 
-  passionate about what they do.
-
-  Easy to Implement
-  Our processes have been refined over years of implementation meaning 
-  our teams always deliver.
-
-  Enhanced Productivity
-  Our customized platform with in-built analytics helps you manage your 
-  distributed teams.
+  <div class="dim-overlay"></div>
+  <header class="container">
+    <div class="header-container inner-container-lg">
+      <div class="header-inner-container">
+        <div class="header-logo-container">
+          <img class="header-logo" src="images/logo.svg" alt="myteam logo">
+          <span class="hamburger" onclick="menuOpen()"></span>
+        </div>
+        <nav>
+          <span class="cross" onclick="menuClose()"></span>
+          <ul>
+            <div>
+              <li><a href="index.html">home</a></li>
+              <li><a href="about.html">about</a></li>
+            </div>
+            <li><a class="btn btn-nav" href="contact.html">contact us</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  
 
 
 
-  Delivering real results for top companies. Some of our success stories.
+  <main>
 
-  “The team perfectly fit the specialized skill set required. They focused 
-  on the most essential features helping us launch the platform eight months 
-  faster than planned.”
-  Kady Baker
-  Product Manager at Bookmark
+    <div class="landing-container container">
+      <div class="inner-container">
+        <div class="talent-container">
+          <h1>Find the<br /> best <span class="highlight-text">talent</span></h1>
+          <p>Finding the right people and building high performing teams can 
+            be hard. Most companies aren’t tapping into the abundance of global 
+            talent. We’re about to change that.</p>
+        </div>
+      </div>
+    </div>
 
-  “We needed to automate our entire onboarding process. The team came in and 
-  built out the whole journey. Since going live, user retention has gone 
-  through the roof!”
-  Aiysha Reese
-  Founder of Manage
+    <div class="about-container container">
+      <div class="inner-container about-inner-container">
+        <div class="about-heading-container">
+          <h2>Build & manage distributed teams like no one else.</h2>
+        </div>
+        <div class="about-cards">
+          <div class="about-card">
+            <img src="images/icon-person.svg" alt="person icon" style="padding: 0 2px 0 5px;">
+            <div>
+              <h3>Experienced Individuals</h3>
+              <p>Our network is made up of highly experienced professionals who are 
+                passionate about what they do.</p>
+            </div>
+          </div>
+          <div class="about-card">
+            <img src="images/icon-cog.svg" alt="cog icon">
+            <div>
+              <h3>Easy to Implement</h3>
+              <p>Our processes have been refined over years of implementation meaning 
+                our teams always deliver.</p>
+            </div>
+          </div>
+          <div class="about-card">
+            <img src="images/icon-chart.svg" alt="chart icon">
+            <div>
+              <h3>Enhanced Productivity</h3>
+              <p>Our customized platform with in-built analytics helps you manage your 
+                distributed teams.</p>
+            </div>
 
-  “Amazing. Our team helped us build an app that delivered a new experience for 
-  hiring a physio. The launch was an instant success with 100k downloads in the 
-  first month.”
-  Arthur Clarke
-  Co-founder of MyPhysio
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="reviews-main-container container">
+      <div class="inner-container">
+        <div class="reviews-container">
+          <h2>Delivering real results for top companies. Some of our <span>success stories.<span></span></h2>
+          <div class="cards-container">
+            <div class="review-card">
+              <p>“The team perfectly fit the specialized skill set required. They focused 
+                on the most essential features helping us launch the platform eight months 
+                faster than planned.”</p>
+              <h3>Kady Baker</h3>
+              <p class="job-title">Product Manager at Bookmark</p>
+              <img src="images/avatar-kady.jpg" alt="Kady Baker Avatar">
+            </div>
+            <div class="review-card">
+              <p>“We needed to automate our entire onboarding process. The team came in and 
+                built out the whole journey. Since going live, user retention has gone 
+                through the roof!”</p>
+              <h3>Aiysha Reese</h3>
+              <p class="job-title">Founder of Manage</p>
+              <img src="images/avatar-aiysha.jpg" alt="Aiysha Reese Avatar">
+            </div>
+            <div class="review-card">
+              <p>“Amazing. Our team helped us build an app that delivered a new experience for 
+                hiring a physio. The launch was an instant success with 100k downloads in the 
+                first month.”</p>
+              <h3>Arthur Clarke</h3>
+              <p class="job-title">Co-founder of MyPhysio</p>
+              <img src="images/avatar-arthur.jpg" alt="Arthur Clarke Avatar">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="start-container container">
+      <div class="inner-container start-inner-container">
+        <h2>Ready to get started?</h2>
+        <a href="contact.html" class="btn btn-primary-dark">contact us</a>
+      </div>
+    </div>
+
+  </main>
 
 
 
-  Ready to get started?
-
-  contact us
 
 
 
-  home
-  about
+  <footer class="container">
+    <div class="footer-main-container inner-container-lg">
+      <div class="footer-first-container">
+        <div class="nav-container">
+          <img src="images/logo.svg" alt="myteam logo">
+          <ul class="footer-nav">
+            <li><a href="index.html">home</a></li>
+            <li><a href="about.html">about</a></li>
+          </ul>
+        </div>
+        <div class="contact-container">
+          <address>
+            987  Hillcrest Lane<br />
+            Irvine, CA<br />
+            California 92714
+          </address>
+          <a href="tel:949-833-7432">Call Us : 949-833-7432</a>
+        </div>
+      </div>
+      <div class="footer-second-container">
+        <div class="social-container">
+          <a class="facebook" href="#"></a>
+          <a class="pinterest" href="#"></a>
+          <a class="twitter" href="#"></a>
+        </div>
+        <div class="copyright-container">
+          Copyright 2020. All Rights Reserved
+        </div>
+      </div>
+    </div>
+  </footer>
 
-  987  Hillcrest Lane
-  Irvine, CA
-  California 92714
-  Call Us : 949-833-7432
+ 
+
+  
+
+  <!-- 
+
+
+
+
+
+  
+
+  
+
+
+  
+  
+
+  
+
+
+
+
+  
+
+
+  
+  
+
+
+  
+  
+
+
+  
+  
+
+
+
+  
+
+  
+
+
+
+
+
+
 
   Copyright 2020. All Rights Reserved
-  
-</body>
+   -->
+   <script src="js/main.js"></script>
+  </body>
 </html>

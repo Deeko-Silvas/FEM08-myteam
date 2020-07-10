@@ -1,0 +1,225 @@
+h1 {
+    font-size: 64px;
+    font-weight: bold;
+    line-height: 56px;
+}
+
+.container {
+    .inner-container {
+        margin: auto 98px;
+    }
+
+    .inner-container-lg {
+        margin: auto 40px;
+    }
+}
+
+.flex-row-vcenter-m {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.dim-overlay {
+    display: none;
+}
+
+header {
+    height: 113px;
+    .header-container {
+
+        .header-inner-container {
+            @extend .flex-row-vcenter-m;
+
+            .header-logo-container {
+                width: auto;
+                .hamburger {
+                    display: none;
+                }
+            }
+
+
+            nav {
+                position: static; 
+                flex-grow: 1;
+                height: 48px;
+                width: auto;
+                margin: auto 0;
+                background: transparent;
+
+                
+    
+                .cross {
+                    display: none;
+                }
+    
+                ul {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding-top: 0;
+                    width: 100%;
+                    height: auto;
+                    margin: auto;
+
+                    div {
+                        li {
+                            &:first-of-type {
+                                margin-top: 0;
+                            }
+                        }
+                    }
+                    
+                    li {
+                        display: inline-block;
+                        margin-right: 38px;
+                        margin-top: 0;
+    
+                        &:last-of-type {
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+
+    }
+}
+
+main {
+
+    .landing-container {
+        padding: 107px 0 248px;
+        .talent-container {
+            padding: 0 50px;
+
+            p {
+                margin-top: 14px;
+            }
+
+       }
+    }
+
+    .about-container {
+        padding: 99px 0 94px;
+        .about-heading-container {
+            width: calc(100% - 130px);
+        
+        }
+
+        .about-cards {
+            margin-top: 64px;
+            .about-card {
+               @extend .flex-row-vcenter-m; 
+               align-items: flex-start;
+               margin-top: 27px;
+
+               img {
+                   margin-right: 23px;
+               }
+    
+               div {
+                   text-align: left;
+    
+                   
+                    h3 {
+                        margin-top: 0;
+                    }
+
+                    p {
+                        padding-top: 15px;
+                    }
+               }
+    
+            }
+        }
+        
+    }
+
+    .reviews-main-container {
+        padding: 100px 0 60px;
+        .reviews-container {
+            h2 {
+                padding: 0 50px;
+            }
+        }
+    }
+
+    .start-container {
+        padding: 76px 0;
+        .start-inner-container {
+            @extend .flex-row-vcenter-m;
+            justify-content: space-between;
+            max-width: 917px;
+
+            a {
+                margin-top: 0;
+            }
+        }
+    }
+
+
+}
+
+footer {
+    padding: 56px 0 54px;
+    .footer-main-container {
+        .footer-first-container {
+            @extend .flex-row-vcenter-m;
+            justify-content: space-between;
+
+            .nav-container,
+            .contact-container {
+                height: 100px;
+            }
+
+            .nav-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+
+                .footer-nav {
+                    margin: auto auto 0;
+
+                    li{
+                        &:first-of-type {
+                            margin-left: 0;
+                        }
+                    }
+                }
+            }
+
+            .contact-container {
+                margin-top: 0;
+                text-align: right;
+            }
+        }
+
+        .footer-second-container {
+            @extend .flex-row-vcenter-m;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 34px;
+
+            .social-container {
+                margin-top: 0;
+
+                a {
+                    &:first-of-type {
+                        margin-left: 0;
+                    }
+                }
+
+            }
+            .copyright-container {
+                margin-top: 0;
+            }
+        }
+    }
+
+}
+
