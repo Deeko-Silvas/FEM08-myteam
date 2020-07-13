@@ -162,9 +162,106 @@ main {
         }
     }
 
-    .start-container {
-        background-position: bottom left;
+
+    //*****************//
+    //***** about *****//
+    //*****************//
+    .about-landing-container {
+        padding: 96px 0 119px;
+        
+        .about-content-container {
+            display: flex;
+            align-items: flex-start;
+
+            h1 {
+                font-size: 64px;
+                line-height: 100px;
+                width: 34%;
+                margin-top: 20px;
+                text-align: left;
+            }
+    
+            p {
+                @extend .font-body-1-l;
+                width: 65%;
+                text-align: left;
+                padding: 0;
+                margin-left: 3px;
+
+                &::before {
+                    content: "";
+                    display: block;
+                    height: 4px;
+                    width: 50px;
+                    margin-bottom: 41px;
+                    margin-top: 4px;
+                    background-color: $PrimaryCoral;
+                }
+            }
+
+        }
+
     }
+
+    .clients-container {
+        background-position: top left;
+        padding: 140px 0;
+        .logo-container {
+            margin-top: 60px;
+
+
+            a {
+                margin-right: 78px;
+
+            }
+
+
+        }
+    }
+
+    .contact-main-container {
+        background-position: bottom right -100px, top 124px left -100px;
+
+        padding: 96px 0 117px;
+
+        .contact-inner-container {
+            max-width: 1112px;
+            display: flex;
+            margin: auto 98px;
+        }
+        
+        .left-contact-container {
+            text-align: left;
+            width: 50%;
+            h1 {
+                font-size: 64px;
+                margin-top: 19px;
+
+            }
+            h2 {
+                font-size: 32px;
+                margin-top: 11px;
+            }
+
+            .contact-card {
+                padding-left: 0;
+            }
+
+        }
+
+        .right-contact-container {
+            width: 50%;
+            padding-left: 15px;
+
+            form {
+                margin-top: 0;
+            }
+
+
+        }
+    }
+
+
 }
 
 footer {

@@ -84,6 +84,12 @@ p {
     &.btn-nav {
         border-color: $PrimaryWhite;
         padding: 8px 34px;
+
+        &:hover {
+            background-color: $PrimaryWhite;
+            color: $SecondaryDGreen;
+            font-weight: 600;
+        }
     }
 
     &.btn-primary-light {
@@ -93,8 +99,32 @@ p {
         color: $SecondarySGreen;
         border-color: $SecondarySGreen;
 
+        &:hover {
+            color: $PrimaryWhite;
+            background-color: $SecondarySGreen;
+        }
+
     }
     &.btn-secondary-light {
+        background-color: $PrimaryWhite;
+        color: black;
+        @extend .font-body-1;
+        border: none;
+        color: $SecondaryJGreen;
+        padding: 10px 32px;
+
+        &:hover {
+            background-color: $SecondaryLightBlue;
+        }
+
+        &.disabled {
+            opacity: 0.2;
+            cursor: none;
+
+            &:hover {
+                background-color: $PrimaryWhite;
+            }
+        }
 
     }
 }
@@ -205,6 +235,10 @@ header {
                     a {
                         color: $PrimaryWhite;
                         text-decoration: none;
+
+                        &:hover {
+                            color: $PrimaryCoral;
+                        }
                     }
                 }
             }
@@ -221,6 +255,9 @@ header {
 main {
     flex: 1 0 auto;
 
+    //*****************//
+    //***** index *****//
+    //*****************//
     .landing-container {
         padding: 75px 0 190px;
         background-image: url("../images/bg-pattern-home-2.svg");
@@ -349,6 +386,302 @@ main {
             margin-top: 24px;
         }
     }
+
+    //*****************//
+    //***** about *****//
+    //*****************//
+    .about-landing-container {
+        padding: 75px 0 100px;
+        background-image: url("../images/bg-pattern-about-1-mobile-nav-1.svg");
+        background-position: bottom -100px right -100px;
+        @extend .background-images;
+
+        p {
+            margin-top: 7px;
+            line-height: 28px;
+        }
+    }
+
+    .directors-container {
+        padding: 88px 0 116px;
+        background-color: $SecondaryJGreen;
+        background-image: url("../images/bg-pattern-about-2-contact-1.svg"), url("../images/bg-pattern-home-4-about-3.svg");
+        background-position: top -100px left -100px, bottom right;
+        @extend .background-images;
+
+        .directors-inner-container {
+            .directors-cards {
+                .directors-card {
+                    &:first-of-type {
+                        margin-top: 48px;
+                    }
+                    margin: 52px auto 0;
+                    height: 253px;
+                    max-width: 310px;
+                    
+                    position: relative;
+                  
+                    h3 {
+                        color: $SecondaryLightBlue;
+                    }
+
+
+                    .card-front {
+                        padding: 30px 45px 69px;
+                        width: 100%;
+                        height: 100%;
+                        background-color: $SecondarySGreen;
+
+                        h3 {
+                            margin-top: 12px;
+                        }
+    
+                           
+                        img {
+                            width: 100px;
+                            height: 100px;
+                            border: 2px solid $PrimaryWhite;
+                            border-radius: 50%;
+                        }
+
+                        .job-title {
+                            font-style: italic;
+                            font-weight: 500;
+                            padding-top: 0;
+                            margin-top: -2px;
+                        }
+
+                    }
+
+                    .card-back {
+                        background-color: $SecondaryDGreen;
+                        padding: 36px 45px 53px;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        bottom: 0;
+                        right: 0;
+                        opacity: 0;
+
+                        transition: opacity 0.5s ease-in-out;
+
+                        p {
+                            margin-top: 1px;
+                        }
+    
+
+                        .card-social {
+                            margin-top: 18px;
+                            a {
+                                &:first-of-type {
+                                    margin-right: 14px;
+                                }
+                            }
+                        }
+                    }
+
+                    .card-btn {
+                        width: 56px;
+                        height: 56px;
+                        border-radius: 50%;
+                        background-color: $PrimaryCoral;
+                        position: absolute;
+                        left: calc(50% - 28px);
+                        bottom: -28px;
+                        background-image: url("../images/icon-cross.svg");
+                        @extend .background-images;
+                        background-position: center;
+                        cursor: pointer;
+
+                        transition: 
+                            opacity 0.5s ease-in-out,
+                            transform 0.5s ease-in-out;
+
+                        &:hover {
+                            background-color: $SecondaryLightBlue;
+                        }
+
+                    }
+
+                    &.open {
+
+                        .card-back {
+                            opacity: 1;
+                        }
+                        
+                        .card-btn {
+                            transform: rotate(45deg);
+                            background-color: $SecondaryLightBlue;
+
+                            &:hover {
+                                background-color: $PrimaryCoral;
+                            }
+                        }
+                    }
+                
+                }
+
+            }
+        }
+    }
+
+    .clients-container {
+        padding: 88px 0 60px;
+        background-color: $SecondarySGreen;
+        background-image: url("../images/bg-pattern-about-4.svg");
+        background-position: top -100px left -100px;
+        @extend .background-images;
+
+        .logo-container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin: auto;
+            margin-top: 20px;
+
+            a {
+                margin-top: 28px;
+                text-align: left;
+                display: flex;
+                justify-content: center;
+
+                img {
+                    transform: scale(0.45);
+                }
+
+                &:last-of-type {
+                    margin-top: 17px;
+                }
+            }
+        }
+    }
+
+    //*****************//
+    //***** contact *****//
+    //*****************//
+    .contact-main-container {
+        background-color: $PrimaryGreen;
+        background-image: url("../images/bg-pattern-contact-2.svg");
+        background-position: bottom -113px right -100px;
+        @extend .background-images;
+        padding: 75px 0 157px;
+        
+        .left-contact-container {
+                        h2 {
+                color: $PrimaryCoral;
+                margin-top: 20px;
+            }
+
+            .contact-card {
+                @extend .flex-row-vcenter;
+                margin-top: 24px;
+
+
+                img {
+                    margin-right: 23px;
+
+                }
+                &:first-of-type {
+                    margin-top: 47px;
+                    img {
+                        padding-left: 7px;
+                    }
+                    
+                }
+
+                p {
+                    @extend .font-body-1;
+                    font-weight: 700;
+                    text-align: left;
+                }
+            }
+        }
+    }
+
+    .right-contact-container {
+        form {
+            margin-top: 31px;
+            input,
+            textarea {
+                color: $PrimaryWhite;
+                background: transparent;
+                border: none;
+                border-bottom: 1px solid $PrimaryWhite;
+                width: 100%;
+                padding: 16px;
+                margin-top: 8px;
+                outline: none;
+                @extend .font-body-2;
+                cursor: pointer;
+
+                &::placeholder {
+                    color: $PrimaryWhite;
+                    opacity: 0.6;
+                }
+            }
+
+            textarea {
+                padding-bottom: 8px;
+                resize: vertical;
+            }
+
+            .invalid-feedback,
+            .invalid-email {
+                display: none;
+                font-size: 10px;
+                font-weight: 700;
+                font-style: italic;
+                line-height: 13px;
+                color: $PrimaryCoral;
+                text-align: left;
+                padding: 8px 16px 0;
+            }
+
+            .invalid {
+                input,
+                textarea {
+                    border-color: $PrimaryCoral;
+
+                    &::placeholder {
+                        color: $PrimaryCoral;
+                    }
+                }
+
+                .invalid-feedback {
+                    display: block;
+                }
+            }
+
+            .valid {
+                input,
+                textarea {
+                    border-color: $SecondaryLightBlue;
+                }
+            }
+
+            button {
+                outline: none;
+                margin-top: 21px;
+                float: left;
+            }
+
+            .pattern-invalid {
+                input {
+                    border-color: $PrimaryCoral;
+                    color: $PrimaryCoral;
+
+                    &::placeholder {
+                        color: $PrimaryCoral;
+                    }
+                }
+                .invalid-email {
+                    display: block;
+                }
+            }
+        }
+    }
+
+
 }
 
 footer {
@@ -380,6 +713,10 @@ footer {
                             text-decoration: none;
                             display: inline-block;
                             color: $PrimaryWhite;
+
+                            &:hover {
+                                color: $PrimaryCoral;
+                            }
                         }
                         
                     }
@@ -402,7 +739,6 @@ footer {
                 a {
                     color: $PrimaryWhite;
                     text-decoration: none;
-
                 }
             }
 
@@ -432,6 +768,8 @@ footer {
                     &.twitter {
                         background-image: url("../images/icon-twitter.svg");
                     }
+
+
                 }
 
 
@@ -455,6 +793,45 @@ footer {
     @import 'monitors';
 }
 
+@media (min-width: 1030px) {
+    main {
+        .directors-container {
+            padding: 140px 0 116px;
+    
+            .directors-inner-container {
+    
+                .directors-cards {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    grid-template-rows: repeat(2, 305px);
+                    grid-column-gap: 24px;
+                    margin-top: 64px;
+                    .directors-card {
+                        max-width: 350px;
+    
+                        .card-back {
+                            padding: 36px 15% 53px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1110px) {
+    .container {
+        .start-inner-container {
+            margin: auto;
+        }
+    }
+
+    main {    
+
+    }
+
+}
+
 @media (min-width: 1296px) {
 
     .container {
@@ -463,4 +840,18 @@ footer {
             margin: auto;
         }
     }
+
+    main {
+        .start-container {
+            background-position: bottom left;
+    
+        }
+
+        .contact-main-container {
+            .contact-inner-container {
+                margin: auto;
+            }
+        }
+    }
+
 }

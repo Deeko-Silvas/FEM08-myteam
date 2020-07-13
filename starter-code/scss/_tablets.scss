@@ -161,6 +161,109 @@ main {
         }
     }
 
+    //*****************//
+    //***** about *****//
+    //*****************//
+    .about-landing-container {
+        padding: 106px 0 111px;
+        background-position: bottom right -100px;
+
+        p {
+            margin-top: 20px;
+            line-height: 28px;
+            padding: 0 60px;
+        }
+    }
+
+    .directors-container {
+        padding: 100px 0 75px;
+        background-position: top left -100px, bottom right;
+
+        .directors-inner-container {
+
+            .directors-cards {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(3, 305px);
+                grid-column-gap: 13px;
+                grid-row-gap: 24px;
+                justify-items: center;
+                margin-top: 48px;
+                .directors-card {
+                    &:first-of-type {
+                        margin-top: 0;
+                    }
+                    margin-top: 0;
+                    width: 100%;
+
+                    .card-back {
+                        padding: 36px 25px 53px;
+                    }
+                }
+
+            }
+        }
+    }
+
+    .clients-container {
+        background-position: top -100px left;
+        padding: 101px 0 98px;
+        .logo-container {
+            height: auto;
+            margin-top: 47px;
+            width: 100%;
+            @extend .flex-row-vcenter-m;
+
+            a {
+                margin-right: 49px;
+                margin-top: 0;
+                &:last-of-type {
+                    margin-right: 0;
+                }
+                img {
+                    width: 100%;
+                    transform: scale(1.0);
+                }
+            }
+
+
+        }
+    }
+
+    .contact-main-container {
+        background-image: url("../images/bg-pattern-contact-2.svg"), url("../images/bg-pattern-about-2-contact-1.svg");
+        background-position: bottom -3px right -100px, top 106px left -100px;
+
+        padding: 106px 0 181px;
+
+        .contact-inner-container {
+            max-width: 542px;
+            margin: auto;
+        }
+        
+        .left-contact-container {
+            h2 {
+                margin-top: 27px;
+            }
+
+            .contact-card {
+                padding: 0 13px;
+                &:first-of-type {
+                    margin-top: 32px;
+                }
+                margin-top: 9px;
+            }
+
+        }
+
+        .right-contact-container {
+            form {
+                margin-top: 39px;
+            }
+        }
+    }
+        
+
 
 }
 

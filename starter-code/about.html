@@ -5,70 +5,229 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="stylesheet" href="scss/normalize.css">
+  <link rel="stylesheet" href="scss/reset.local.css">
+  <link rel="stylesheet" href="scss/main.css">
   
   <title>Frontend Mentor | myteam website challenge - About</title>
 </head>
 <body>
+  <div class="dim-overlay"></div>
+  <header class="container">
+    <div class="header-container inner-container-lg">
+      <div class="header-inner-container">
+        <div class="header-logo-container">
+          <a href="index.html"><img class="header-logo" src="images/logo.svg" alt="myteam logo"></a>
+          <span class="hamburger" onclick="menuOpen()"></span>
+        </div>
+        <nav>
+          <span class="cross" onclick="menuClose()"></span>
+          <ul>
+            <div>
+              <li><a href="index.html">home</a></li>
+              <li><a href="about.html">about</a></li>
+            </div>
+            <li><a class="btn btn-nav" href="contact.html">contact us</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
 
-  home
-  about
-
-  contact us
-
-
-
-  About
-
-  We help companies build dynamic teams made up of top global talent. 
-  Using our network of passionate professionals we drive innovation 
-  and deliver incredible outcomes. Talented, diverse teams shape the 
-  best products and experiences. We’ll bring those teams to you.
-
-
-
-  Meet the directors
-
-  “It always amazes me how much talent there is in every corner of the globe.”
-  Nikita Marks
-  Founder & CEO
-
-  “Distributed teams required unique processes. You need to approach work in a new way.”
-  Cristian Duncan
-  Co-founder & COO
-
-  “Technology is at the forefront of enabling distributed teams. That's where we come in.”
-  Cruz Hamer
-  Co-founder & CTO
-
-  “Hiring similar people from similar backgrounds is a surefire way to stunt innovation.”
-  Drake Heaton
-  Business Development Lead
-
-  “Unique perspectives shape unique products, which is what you need to survive these days.”
-  Griffin Wise
-  Lead Marketing
-
-  “Empowered teams create truly amazing products. Set the north star and let them follow it.”
-  Aden Allan
-  Head of Talent
+  <main>
+    <div class="about-landing-container container">
+      <div class="inner-container">
+        <div class="about-content-container">
+          <h1>About</h1>
+          <p>We help companies build dynamic teams made up of top global talent. 
+            Using our network of passionate professionals we drive innovation 
+            and deliver incredible outcomes. Talented, diverse teams shape the 
+            best products and experiences. We’ll bring those teams to you.</p>
+        </div>
+      </div>
 
 
 
-  Ready to get started?
+    </div>
 
-  contact us
+    <div class="directors-container container">
+      <div class="inner-container directors-inner-container">
+        <h2>Meet the directors</h2>
+        <div class="directors-cards">
+          <div class="directors-card">
+            <div class="card-front">
+              <img src="images/avatar-nikita.jpg" alt="Nikita Avatar">
+              <h3>Nikita Marks</h3>
+              <p class="job-title">Founder & CEO</p>
+            </div>
+            <div class="card-back">
+              <h3>Nikita Marks</h3>
+              <p>“It always amazes me how much talent there is in every corner of the globe.”</p>
+              <div class=card-social>
+                <a href="#" class="card-twitter"><img src="images/icon-twitter.svg" alt="Twitter logo"></a>
+                <a href="#" class="card-facebook"><img src="images/icon-linkedin.svg" alt="Linkedin logo"></a>
+              </div>
+            </div>
+            <div class="card-btn"></div>
+          </div>
+          <div class="directors-card">
+            <div class="card-front">
+              <img src="images/avatar-christian.jpg" alt="Christian Avatar">
+              <h3>Cristian Duncan</h3>
+              <p class="job-title">Co-founder & COO</p>
+            </div>
+            <div class="card-back">
+              <h3>Cristian Duncan</h3>
+              <p>“Distributed teams required unique processes. You need to approach work in a new way.”</p>
+              <div class=card-social>
+                <a href="#" class="card-twitter"><img src="images/icon-twitter.svg" alt="Twitter logo"></a>
+                <a href="#" class="card-facebook"><img src="images/icon-linkedin.svg" alt="Linkedin logo"></a>
+              </div>
+            </div>
+            <div class="card-btn"></div>
+          </div>
+          <div class="directors-card">
+            <div class="card-front">
+              <img src="images/avatar-cruz.jpg" alt="Cruz Avatar">
+              <h3>Cruz Hamer</h3>
+              <p class="job-title">Co-founder & CTO</p>
+            </div>
+            <div class="card-back">
+              <h3>Cruz Hamer</h3>
+              <p>  “Technology is at the forefront of enabling distributed teams. That's where we come in.”
+              </p>
+              <div class=card-social>
+                <a href="#" class="card-twitter"><img src="images/icon-twitter.svg" alt="Twitter logo"></a>
+                <a href="#" class="card-facebook"><img src="images/icon-linkedin.svg" alt="Linkedin logo"></a>
+              </div>
+            </div>
+            <div class="card-btn"></div>
+          </div>
+          <div class="directors-card">
+            <div class="card-front">
+              <img src="images/avatar-drake.jpg" alt="Christian Avatar">
+              <h3>Drake Heaton</h3>
+              <p class="job-title">Business Development Lead</p>
+            </div>
+            <div class="card-back">
+              <h3>Drake Heaton</h3>
+              <p>  “Hiring similar people from similar backgrounds is a surefire way to stunt innovation.”
+              </p>
+              <div class=card-social>
+                <a href="#" class="card-twitter"><img src="images/icon-twitter.svg" alt="Twitter logo"></a>
+                <a href="#" class="card-facebook"><img src="images/icon-linkedin.svg" alt="Linkedin logo"></a>
+              </div>
+            </div>
+            <div class="card-btn"></div>
+          </div>
+          <div class="directors-card">
+            <div class="card-front">
+              <img src="images/avatar-griffin.jpg" alt="Griffin Avatar">
+              <h3>Griffin Wise</h3>
+              <p class="job-title">Lead Marketing</p>
+            </div>
+            <div class="card-back">
+              <h3>Griffin Wise</h3>
+              <p>“Unique perspectives shape unique products, which is what you need to survive these days.”
+              </p>
+              <div class=card-social>
+                <a href="#" class="card-twitter"><img src="images/icon-twitter.svg" alt="Twitter logo"></a>
+                <a href="#" class="card-facebook"><img src="images/icon-linkedin.svg" alt="Linkedin logo"></a>
+              </div>
+            </div>
+            <div class="card-btn"></div>
+          </div>
+          <div class="directors-card">
+            <div class="card-front">
+              <img src="images/avatar-aden.jpg" alt="Aden Avatar">
+              <h3>Aden Allan</h3>
+              <p class="job-title">  Head of Talent</p>
+            </div>
+            <div class="card-back">
+              <h3>Aden Allan</h3>
+              <p>  “Empowered teams create truly amazing products. Set the north star and let them follow it.”
+              </p>
+              <div class=card-social>
+                <a href="#" class="card-twitter"><img src="images/icon-twitter.svg" alt="Twitter logo"></a>
+                <a href="#" class="card-facebook"><img src="images/icon-linkedin.svg" alt="Linkedin logo"></a>
+              </div>
+            </div>
+            <div class="card-btn"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="clients-container container">
+      <div class="inner-container-lg">
+        <h2>Some of our clients</h2>
+        <div class="logo-container">
+          <a href="#"><img src="images/logo-the-verge.png" alt="The Verge logo"></a>
+          <a href="#"><img src="images/logo-jakarta-post.png" alt="The Jakarta Post logo"></a>
+          <a href="#"><img src="images/logo-the-guardian.png" alt="The Guardian logo"></a>
+          <a href="#"><img src="images/logo-tech-radar.png" alt="Tech Radar logo"></a>
+          <a href="#"><img src="images/logo-gadgets-now.png" alt="Gadgets Now logo"></a>
+        </div>
+      </div>
+    </div>
+  
+
+    <div class="start-container container">
+      <div class="inner-container start-inner-container">
+        <h2>Ready to get started?</h2>
+        <a href="contact.html" class="btn btn-primary-dark">contact us</a>
+      </div>
+    </div>
+  </main>
 
 
 
-  home
-  about
 
-  987  Hillcrest Lane
-  Irvine, CA
-  California 92714
-  Call Us : 949-833-7432
+  
 
-  Copyright 2020. All Rights Reserved
+
+  <footer class="container">
+    <div class="footer-main-container inner-container-lg">
+      <div class="footer-first-container">
+        <div class="nav-container">
+          <img src="images/logo.svg" alt="myteam logo">
+          <ul class="footer-nav">
+            <li><a href="index.html">home</a></li>
+            <li><a href="about.html">about</a></li>
+          </ul>
+        </div>
+        <div class="contact-container">
+          <address>
+            987  Hillcrest Lane<br />
+            Irvine, CA<br />
+            California 92714
+          </address>
+          <a href="tel:949-833-7432">Call Us : 949-833-7432</a>
+        </div>
+      </div>
+      <div class="footer-second-container">
+        <div class="social-container">
+          <a class="facebook" href="#"></a>
+          <a class="pinterest" href="#"></a>
+          <a class="twitter" href="#"></a>
+        </div>
+        <div class="copyright-container">
+          Copyright 2020. All Rights Reserved
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  
+
+  
+  
+
+  
+
+  <script src="js/main.js"></script>
   
 </body>
 </html>

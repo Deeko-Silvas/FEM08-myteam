@@ -52,25 +52,26 @@ p {
   margin: auto 24px;
 }
 
-.font-body-1, main .start-container a {
+.font-body-1, .btn.btn-secondary-light, main .start-container a, main .contact-main-container .left-contact-container .contact-card p {
   font-weight: 600;
   font-size: 18px;
   line-height: 28px;
 }
 
-.font-body-2, p, footer .footer-main-container .footer-first-container .nav-container ul, footer .footer-main-container .footer-first-container .contact-container address,
+.font-body-2, p, main .right-contact-container form input,
+main .right-contact-container form textarea, footer .footer-main-container .footer-first-container .nav-container ul, footer .footer-main-container .footer-first-container .contact-container address,
 footer .footer-main-container .footer-first-container .contact-container a, footer .footer-main-container .footer-second-container .copyright-container {
   font-weight: 600;
   font-size: 15px;
   line-height: 25px;
 }
 
-.background-images, main .landing-container, main .about-container, main .reviews-main-container, main .start-container {
+.background-images, main .landing-container, main .about-container, main .reviews-main-container, main .start-container, main .about-landing-container, main .directors-container, main .directors-container .directors-inner-container .directors-cards .directors-card .card-btn, main .clients-container, main .contact-main-container {
   background-repeat: no-repeat;
   background-size: initial;
 }
 
-.flex-row-vcenter, header .header-container, header .header-container .header-inner-container .header-logo-container {
+.flex-row-vcenter, header .header-container, header .header-container .header-inner-container .header-logo-container, main .contact-main-container .left-contact-container .contact-card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -96,6 +97,12 @@ footer .footer-main-container .footer-first-container .contact-container a, foot
   padding: 8px 34px;
 }
 
+.btn.btn-nav:hover {
+  background-color: white;
+  color: #002529;
+  font-weight: 600;
+}
+
 .btn.btn-primary-light {
   color: white;
 }
@@ -103,6 +110,32 @@ footer .footer-main-container .footer-first-container .contact-container a, foot
 .btn.btn-primary-dark {
   color: #012f34;
   border-color: #012f34;
+}
+
+.btn.btn-primary-dark:hover {
+  color: white;
+  background-color: #012f34;
+}
+
+.btn.btn-secondary-light {
+  background-color: white;
+  color: black;
+  border: none;
+  color: #004047;
+  padding: 10px 32px;
+}
+
+.btn.btn-secondary-light:hover {
+  background-color: #79c8c7;
+}
+
+.btn.btn-secondary-light.disabled {
+  opacity: 0.2;
+  cursor: none;
+}
+
+.btn.btn-secondary-light.disabled:hover {
+  background-color: white;
 }
 
 .highlight-text {
@@ -215,6 +248,10 @@ header .header-container nav ul li {
 header .header-container nav ul li a {
   color: white;
   text-decoration: none;
+}
+
+header .header-container nav ul li a:hover {
+  color: #f67e7e;
 }
 
 main {
@@ -335,6 +372,320 @@ main .start-container a {
   margin-top: 24px;
 }
 
+main .about-landing-container {
+  padding: 75px 0 100px;
+  background-image: url("../images/bg-pattern-about-1-mobile-nav-1.svg");
+  background-position: bottom -100px right -100px;
+}
+
+main .about-landing-container p {
+  margin-top: 7px;
+  line-height: 28px;
+}
+
+main .directors-container {
+  padding: 88px 0 116px;
+  background-color: #004047;
+  background-image: url("../images/bg-pattern-about-2-contact-1.svg"), url("../images/bg-pattern-home-4-about-3.svg");
+  background-position: top -100px left -100px, bottom right;
+}
+
+main .directors-container .directors-inner-container .directors-cards .directors-card {
+  margin: 52px auto 0;
+  height: 253px;
+  max-width: 310px;
+  position: relative;
+}
+
+main .directors-container .directors-inner-container .directors-cards .directors-card:first-of-type {
+  margin-top: 48px;
+}
+
+main .directors-container .directors-inner-container .directors-cards .directors-card h3 {
+  color: #79c8c7;
+}
+
+main .directors-container .directors-inner-container .directors-cards .directors-card .card-front {
+  padding: 30px 45px 69px;
+  width: 100%;
+  height: 100%;
+  background-color: #012f34;
+}
+
+main .directors-container .directors-inner-container .directors-cards .directors-card .card-front h3 {
+  margin-top: 12px;
+}
+
+main .directors-container .directors-inner-container .directors-cards .directors-card .card-front img {
+  width: 100px;
+  height: 100px;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+main .directors-container .directors-inner-container .directors-cards .directors-card .card-front .job-title {
+  font-style: italic;
+  font-weight: 500;
+  padding-top: 0;
+  margin-top: -2px;
+}
+
+main .directors-container .directors-inner-container .directors-cards .directors-card .card-back {
+  background-color: #002529;
+  padding: 36px 45px 53px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+}
+
+main .directors-container .directors-inner-container .directors-cards .directors-card .card-back p {
+  margin-top: 1px;
+}
+
+main .directors-container .directors-inner-container .directors-cards .directors-card .card-back .card-social {
+  margin-top: 18px;
+}
+
+main .directors-container .directors-inner-container .directors-cards .directors-card .card-back .card-social a:first-of-type {
+  margin-right: 14px;
+}
+
+main .directors-container .directors-inner-container .directors-cards .directors-card .card-btn {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: #f67e7e;
+  position: absolute;
+  left: calc(50% - 28px);
+  bottom: -28px;
+  background-image: url("../images/icon-cross.svg");
+  background-position: center;
+  cursor: pointer;
+  -webkit-transition: opacity 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+}
+
+main .directors-container .directors-inner-container .directors-cards .directors-card .card-btn:hover {
+  background-color: #79c8c7;
+}
+
+main .directors-container .directors-inner-container .directors-cards .directors-card.open .card-back {
+  opacity: 1;
+}
+
+main .directors-container .directors-inner-container .directors-cards .directors-card.open .card-btn {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  background-color: #79c8c7;
+}
+
+main .directors-container .directors-inner-container .directors-cards .directors-card.open .card-btn:hover {
+  background-color: #f67e7e;
+}
+
+main .clients-container {
+  padding: 88px 0 60px;
+  background-color: #012f34;
+  background-image: url("../images/bg-pattern-about-4.svg");
+  background-position: top -100px left -100px;
+}
+
+main .clients-container .logo-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  margin: auto;
+  margin-top: 20px;
+}
+
+main .clients-container .logo-container a {
+  margin-top: 28px;
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .clients-container .logo-container a img {
+  -webkit-transform: scale(0.45);
+          transform: scale(0.45);
+}
+
+main .clients-container .logo-container a:last-of-type {
+  margin-top: 17px;
+}
+
+main .contact-main-container {
+  background-color: #014e56;
+  background-image: url("../images/bg-pattern-contact-2.svg");
+  background-position: bottom -113px right -100px;
+  padding: 75px 0 157px;
+}
+
+main .contact-main-container .left-contact-container h2 {
+  color: #f67e7e;
+  margin-top: 20px;
+}
+
+main .contact-main-container .left-contact-container .contact-card {
+  margin-top: 24px;
+}
+
+main .contact-main-container .left-contact-container .contact-card img {
+  margin-right: 23px;
+}
+
+main .contact-main-container .left-contact-container .contact-card:first-of-type {
+  margin-top: 47px;
+}
+
+main .contact-main-container .left-contact-container .contact-card:first-of-type img {
+  padding-left: 7px;
+}
+
+main .contact-main-container .left-contact-container .contact-card p {
+  font-weight: 700;
+  text-align: left;
+}
+
+main .right-contact-container form {
+  margin-top: 31px;
+}
+
+main .right-contact-container form input,
+main .right-contact-container form textarea {
+  color: white;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+  width: 100%;
+  padding: 16px;
+  margin-top: 8px;
+  outline: none;
+  cursor: pointer;
+}
+
+main .right-contact-container form input::-webkit-input-placeholder,
+main .right-contact-container form textarea::-webkit-input-placeholder {
+  color: white;
+  opacity: 0.6;
+}
+
+main .right-contact-container form input:-ms-input-placeholder,
+main .right-contact-container form textarea:-ms-input-placeholder {
+  color: white;
+  opacity: 0.6;
+}
+
+main .right-contact-container form input::-ms-input-placeholder,
+main .right-contact-container form textarea::-ms-input-placeholder {
+  color: white;
+  opacity: 0.6;
+}
+
+main .right-contact-container form input::placeholder,
+main .right-contact-container form textarea::placeholder {
+  color: white;
+  opacity: 0.6;
+}
+
+main .right-contact-container form textarea {
+  padding-bottom: 8px;
+  resize: vertical;
+}
+
+main .right-contact-container form .invalid-feedback,
+main .right-contact-container form .invalid-email {
+  display: none;
+  font-size: 10px;
+  font-weight: 700;
+  font-style: italic;
+  line-height: 13px;
+  color: #f67e7e;
+  text-align: left;
+  padding: 8px 16px 0;
+}
+
+main .right-contact-container form .invalid input,
+main .right-contact-container form .invalid textarea {
+  border-color: #f67e7e;
+}
+
+main .right-contact-container form .invalid input::-webkit-input-placeholder,
+main .right-contact-container form .invalid textarea::-webkit-input-placeholder {
+  color: #f67e7e;
+}
+
+main .right-contact-container form .invalid input:-ms-input-placeholder,
+main .right-contact-container form .invalid textarea:-ms-input-placeholder {
+  color: #f67e7e;
+}
+
+main .right-contact-container form .invalid input::-ms-input-placeholder,
+main .right-contact-container form .invalid textarea::-ms-input-placeholder {
+  color: #f67e7e;
+}
+
+main .right-contact-container form .invalid input::placeholder,
+main .right-contact-container form .invalid textarea::placeholder {
+  color: #f67e7e;
+}
+
+main .right-contact-container form .invalid .invalid-feedback {
+  display: block;
+}
+
+main .right-contact-container form .valid input,
+main .right-contact-container form .valid textarea {
+  border-color: #79c8c7;
+}
+
+main .right-contact-container form button {
+  outline: none;
+  margin-top: 21px;
+  float: left;
+}
+
+main .right-contact-container form .pattern-invalid input {
+  border-color: #f67e7e;
+  color: #f67e7e;
+}
+
+main .right-contact-container form .pattern-invalid input::-webkit-input-placeholder {
+  color: #f67e7e;
+}
+
+main .right-contact-container form .pattern-invalid input:-ms-input-placeholder {
+  color: #f67e7e;
+}
+
+main .right-contact-container form .pattern-invalid input::-ms-input-placeholder {
+  color: #f67e7e;
+}
+
+main .right-contact-container form .pattern-invalid input::placeholder {
+  color: #f67e7e;
+}
+
+main .right-contact-container form .pattern-invalid .invalid-email {
+  display: block;
+}
+
 footer {
   background: #002529;
   color: white;
@@ -367,6 +718,10 @@ footer .footer-main-container .footer-first-container .nav-container ul li a {
   text-decoration: none;
   display: inline-block;
   color: white;
+}
+
+footer .footer-main-container .footer-first-container .nav-container ul li a:hover {
+  color: #f67e7e;
 }
 
 footer .footer-main-container .footer-first-container .contact-container {
@@ -430,7 +785,7 @@ footer .footer-main-container .footer-second-container .copyright-container {
   .container .inner-container-lg {
     margin: auto 40px;
   }
-  .flex-row-vcenter-m, header .header-container .header-inner-container, main .about-container .about-cards .about-card, main .start-container .start-inner-container, footer .footer-main-container .footer-first-container, footer .footer-main-container .footer-second-container {
+  .flex-row-vcenter-m, header .header-container .header-inner-container, main .about-container .about-cards .about-card, main .start-container .start-inner-container, main .clients-container .logo-container, footer .footer-main-container .footer-first-container, footer .footer-main-container .footer-second-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -547,6 +902,84 @@ footer .footer-main-container .footer-second-container .copyright-container {
   main .start-container .start-inner-container a {
     margin-top: 0;
   }
+  main .about-landing-container {
+    padding: 106px 0 111px;
+    background-position: bottom right -100px;
+  }
+  main .about-landing-container p {
+    margin-top: 20px;
+    line-height: 28px;
+    padding: 0 60px;
+  }
+  main .directors-container {
+    padding: 100px 0 75px;
+    background-position: top left -100px, bottom right;
+  }
+  main .directors-container .directors-inner-container .directors-cards {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: (305px)[3];
+        grid-template-rows: repeat(3, 305px);
+    grid-column-gap: 13px;
+    grid-row-gap: 24px;
+    justify-items: center;
+    margin-top: 48px;
+  }
+  main .directors-container .directors-inner-container .directors-cards .directors-card {
+    margin-top: 0;
+    width: 100%;
+  }
+  main .directors-container .directors-inner-container .directors-cards .directors-card:first-of-type {
+    margin-top: 0;
+  }
+  main .directors-container .directors-inner-container .directors-cards .directors-card .card-back {
+    padding: 36px 25px 53px;
+  }
+  main .clients-container {
+    background-position: top -100px left;
+    padding: 101px 0 98px;
+  }
+  main .clients-container .logo-container {
+    height: auto;
+    margin-top: 47px;
+    width: 100%;
+  }
+  main .clients-container .logo-container a {
+    margin-right: 49px;
+    margin-top: 0;
+  }
+  main .clients-container .logo-container a:last-of-type {
+    margin-right: 0;
+  }
+  main .clients-container .logo-container a img {
+    width: 100%;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  main .contact-main-container {
+    background-image: url("../images/bg-pattern-contact-2.svg"), url("../images/bg-pattern-about-2-contact-1.svg");
+    background-position: bottom -3px right -100px, top 106px left -100px;
+    padding: 106px 0 181px;
+  }
+  main .contact-main-container .contact-inner-container {
+    max-width: 542px;
+    margin: auto;
+  }
+  main .contact-main-container .left-contact-container h2 {
+    margin-top: 27px;
+  }
+  main .contact-main-container .left-contact-container .contact-card {
+    padding: 0 13px;
+    margin-top: 9px;
+  }
+  main .contact-main-container .left-contact-container .contact-card:first-of-type {
+    margin-top: 32px;
+  }
+  main .contact-main-container .right-contact-container form {
+    margin-top: 39px;
+  }
   footer {
     padding: 56px 0 54px;
   }
@@ -624,7 +1057,7 @@ footer .footer-main-container .footer-second-container .copyright-container {
         -ms-flex-align: center;
             align-items: center;
   }
-  .font-body-1-l, main .landing-container .talent-container p, footer .footer-main-container .footer-first-container .nav-container .footer-nav li a {
+  .font-body-1-l, main .landing-container .talent-container p, main .about-landing-container .about-content-container p, footer .footer-main-container .footer-first-container .nav-container .footer-nav li a {
     font-weight: 600;
     font-size: 18px;
     line-height: 28px;
@@ -725,8 +1158,81 @@ footer .footer-main-container .footer-second-container .copyright-container {
   main .reviews-main-container .reviews-container .cards-container .review-card img {
     margin-top: 30px;
   }
-  main .start-container {
-    background-position: bottom left;
+  main .about-landing-container {
+    padding: 96px 0 119px;
+  }
+  main .about-landing-container .about-content-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  main .about-landing-container .about-content-container h1 {
+    font-size: 64px;
+    line-height: 100px;
+    width: 34%;
+    margin-top: 20px;
+    text-align: left;
+  }
+  main .about-landing-container .about-content-container p {
+    width: 65%;
+    text-align: left;
+    padding: 0;
+    margin-left: 3px;
+  }
+  main .about-landing-container .about-content-container p::before {
+    content: "";
+    display: block;
+    height: 4px;
+    width: 50px;
+    margin-bottom: 41px;
+    margin-top: 4px;
+    background-color: #f67e7e;
+  }
+  main .clients-container {
+    background-position: top left;
+    padding: 140px 0;
+  }
+  main .clients-container .logo-container {
+    margin-top: 60px;
+  }
+  main .clients-container .logo-container a {
+    margin-right: 78px;
+  }
+  main .contact-main-container {
+    background-position: bottom right -100px, top 124px left -100px;
+    padding: 96px 0 117px;
+  }
+  main .contact-main-container .contact-inner-container {
+    max-width: 1112px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: auto 98px;
+  }
+  main .contact-main-container .left-contact-container {
+    text-align: left;
+    width: 50%;
+  }
+  main .contact-main-container .left-contact-container h1 {
+    font-size: 64px;
+    margin-top: 19px;
+  }
+  main .contact-main-container .left-contact-container h2 {
+    font-size: 32px;
+    margin-top: 11px;
+  }
+  main .contact-main-container .left-contact-container .contact-card {
+    padding-left: 0;
+  }
+  main .contact-main-container .right-contact-container {
+    width: 50%;
+    padding-left: 15px;
+  }
+  main .contact-main-container .right-contact-container form {
+    margin-top: 0;
   }
   footer {
     padding: 49px 0 47px;
@@ -777,9 +1283,43 @@ footer .footer-main-container .footer-second-container .copyright-container {
   }
 }
 
+@media (min-width: 1030px) {
+  main .directors-container {
+    padding: 140px 0 116px;
+  }
+  main .directors-container .directors-inner-container .directors-cards {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    -ms-grid-rows: (305px)[2];
+        grid-template-rows: repeat(2, 305px);
+    grid-column-gap: 24px;
+    margin-top: 64px;
+  }
+  main .directors-container .directors-inner-container .directors-cards .directors-card {
+    max-width: 350px;
+  }
+  main .directors-container .directors-inner-container .directors-cards .directors-card .card-back {
+    padding: 36px 15% 53px;
+  }
+}
+
+@media (min-width: 1110px) {
+  .container .start-inner-container {
+    margin: auto;
+  }
+}
+
 @media (min-width: 1296px) {
   .container .inner-container,
   .container .inner-container-lg {
+    margin: auto;
+  }
+  main .start-container {
+    background-position: bottom left;
+  }
+  main .contact-main-container .contact-inner-container {
     margin: auto;
   }
 }
